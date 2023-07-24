@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Save kruise-manager
         run: docker pull openkruise/kruise-manager:v1.3.0; docker save openkruise/kruise-manager:v1.3.0 -o kruise-manager.tar.gz
-      - uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      - uses: dev-drprasad/delete-tag-and-release@v1.0.1
         with:
           delete_release: true
           tag_name: v1.3.0
